@@ -4,7 +4,7 @@ let count = 0
 app.get('/count',(reg,res) => {
     console.log("I received a request to /count", count)
     count++
-    res.send("<h1><link rel='/static/style.css' /> This page has been visited " + count +  ((count > 1) ? " times</h1>" : " time</h1>"))
+    res.send("<h1><link href='/static/style.css' rel='stylesheet' /> This page has been visited " + count +  ((count > 1) ? " times</h1>" : " time</h1>"))
 } )
 app.get('/reset',(reg , res) => {
     console.log("I received a request to /reset")
